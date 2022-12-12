@@ -4,31 +4,32 @@ using TeamFinder.Models;
 
 namespace TeamFinder.Controllers
 {
-    public class UserHomeController : Controller
+    public class TeamController : Controller
     {
-        private readonly ILogger<UserHomeController> _logger;
+        private readonly ILogger<TeamController> _logger;
 
-        public UserHomeController(ILogger<UserHomeController> logger)
+        public TeamController(ILogger<TeamController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Mentor()
-        {
-            /*    mentorleri listele */
-            return View();
-        }
-
-        public IActionResult ShowProfile()
-        {
-            return View();
-        }
         public IActionResult Index()
         {
             return View();
         }
-      
 
+        public IActionResult CreateTeam()
+        {
+            return View();
+        }
+        public IActionResult Details()
+        {
+            return View();
+        }
+        public IActionResult Delete()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
